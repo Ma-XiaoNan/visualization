@@ -1,0 +1,80 @@
+{
+	"myBarChart1":    
+	[
+		{"namex": "4月11日","legend":"计画产出","seriesa": 25.6,"seriesb": 28.7},
+		{"namex": "4月12日","legend":"实际产出","seriesa": 76.7,"seriesb": 70.7},
+		{"namex": "4月13日","seriesa": 135.6,"seriesb": 175.6},
+		{"namex": "4月14日","seriesa": 162.2,"seriesb": 182.2},
+		{"namex": "4月15日","seriesa": 32.6,"seriesb": 48.7}
+	],
+	"myBarChart2":    
+	[
+		{"namex": "4月11日","seriesa": 120},
+		{"namex": "4月12日","seriesa": 190},
+		{"namex": "4月13日","seriesa": 150},
+		{"namex": "4月14日","seriesa": 80},
+		{"namex": "4月15日","seriesa": 70}
+	],
+	"mylineChart1":
+	[ 
+	    {"namex": "周一","legend":"本周预计产值","seriesa": 227,"seriesb": 200,"seriesc": 159,"seriesd": 20},
+		{"namex": "周二","legend":"本周实际产值","seriesa": 207,"seriesb": 214,"seriesc": 183,"seriesd": 45},
+		{"namex": "周三","legend":"合格数量","seriesa": 297,"seriesb": 202,"seriesc": 150,"seriesd": 35},
+		{"namex": "周四","legend":"未合格数量","seriesa": 267,"seriesb": 212,"seriesc": 192,"seriesd": 45},
+		{"namex": "周五","seriesa": 277,"seriesb": 198,"seriesc": 155,"seriesd": 25},
+		{"namex": "周六","seriesa": 267,"seriesb": 216,"seriesc": 187,"seriesd": 40},
+		{"namex": "周日","seriesa": 258,"seriesb": 208,"seriesc": 172,"seriesd": 36}
+	],
+	"mypieChart1":
+	[   
+
+	    {"legend": "实际直通率","seriesa": 500},
+		{"legend": "剩余直通率","seriesa": 100}
+	
+	],
+	"myBarChart3":
+	[
+	    {"namex": "切片後CHIP","seriesa": 66},
+	    {"namex": "胶面 CHIP","seriesa": 89},
+		{"namex": "锯痕 15~20","seriesa": 34},
+		{"namex": "锯痕 21~30","seriesa": 70},
+		{"namex": "倒角缺口","seriesa": 44},
+		{"namex": "裂丝","seriesa": 30},
+		{"namex": "破片","seriesa": 63},
+		{"namex": "微晶","seriesa": 22},
+		{"namex": "洗净破片","seriesa": 15},
+		{"namex": "雑质","seriesa": 2}
+	],
+	"myPieChart2":
+	[   
+
+	    {"legend": "已达成","seriesa": 680},
+		{"legend": "未达成","seriesa": 220}
+	
+	],
+	"mylineChart2":
+	[ 
+	    {"namex": "周一","legend":"实际直通数","seriesa": 70,"seriesb": 14},
+		{"namex": "周二","legend":"剩余直通数","seriesa": 72,"seriesb": 16},
+		{"namex": "周三","seriesa": 75,"seriesb": 20},
+		{"namex": "周四","seriesa": 69,"seriesb": 15},
+		{"namex": "周五","seriesa": 64,"seriesb": 11},
+		{"namex": "周六","seriesa": 78,"seriesb": 10},
+		{"namex": "周日","seriesa": 72,"seriesb": 14}
+	],
+	"SHUJU1":
+	[
+		{"name1": "13:30","name2": "P001","name3": "A03","name4": "灯号正常"},
+		{"name1": "11:27","name2": "P001","name3": "A21","name4": "灯号正常"},
+		{"name1": "10:00","name2": "P001","name3": "A30","name4": "灯号异常"},
+		{"name1": "09:33","name2": "P001","name3": "A21","name4": "灯号异常"}
+	],
+	"SHUJU2":
+	[
+		{"name21": "13:30","name22": "P001","name23": "A03","name24": "温度正常"},
+		{"name21": "11:27","name22": "P001","name23": "A21","name24": "温度正常"},
+		{"name21": "10:00","name22": "P001","name23": "A30","name24": "温度异常"},
+		{"name21": "09:33","name22": "P001","name23": "A21","name24": "温度异常"}
+	]
+	
+}

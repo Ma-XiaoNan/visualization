@@ -1,0 +1,545 @@
+/*首页及各分页面主体CSS样式*/
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+	margin: 0;
+	padding: 0;
+}
+
+@font-face {
+	font-family: '方正粗倩_GBK';
+	/*字体名称*/
+	src: url('font/方正粗倩_GBK.TTF');
+	/*字体源文件*/
+}
+
+body {
+	margin: 0px;
+}
+ h1 {
+	width: 1600px;
+	height: 80px;
+	text-align: center;
+	font-size: 36px;
+	font-family: "微软雅黑";
+	color: #63d8e2;
+	margin: 0px;
+	line-height: 70px;
+	/*background:-webkit-linear-gradient(bottom,#2897d6,#8feaf4);
+	-webkit-background-clip:text; 
+    -webkit-text-fill-color:transparent; */
+   /*background:-webkit-linear-gradient(bottom,#1e639a,#92e8f7);
+   -webkit-background-clip:text; 
+   -webkit-text-fill-color:transparent;*/
+	background-image:-webkit-linear-gradient(bottom,#0079bf 0%,#61c8e9 50%,#ffffff 100%); 
+    -webkit-background-clip:text; 
+    -webkit-text-fill-color:transparent; 
+	/*background: linear-gradient(to top, #2897d6 0%, #5cc0e5 50%, #63d8e2 100%);
+	-webkit-text-fill-color: transparent;
+    -webkit-background-clip: text; */
+   /*新属性只有*/
+    /*background: --webkit-linear-gradient(bottom,#2897d6, #8feaf4);
+    -webkit-background-clip: text;必需加前缀 -webkit- 才支持这个text值 
+    -webkit-text-fill-color: transparent; text-fill-color会覆盖color所定义的字体颜色： */
+}
+h2,.DDSCKHYI {
+	font-family: "方正粗倩_GBK";
+	font-size: 18px;
+	color: #06eff3;
+	/*font-weight: 500;*/
+	margin: 0;
+}
+p{
+    font-family: "方正粗倩_GBK";
+	font-size: 12px;
+	color: #3bdce7;
+	/*font-weight: 500;*/
+	margin: 0;
+}
+#maina h2,.DDSCKHYI {height: 24px;}
+.LGCJKSH {
+	width: 1600px;
+	height: 780px;
+	background-image: url(../img/beijing.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	margin: 10px;
+}
+.yield,
+.Achievement {
+	background-image: url(../img/fenxaingBJ.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.Important {
+	background-image: url(../img/ImportantBJ.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.Product,.Analysis {
+	background-image: url(../img/fenxaingBJ.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+.Order {
+	background-image: url(../img/OrderBJ.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.main2 {
+	background-image: url(../img/BYCLBJ.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	float: left;
+	text-align: center;
+	font-size: 18px;
+	font-family: "方正粗倩_GBK";
+	color: #06eff3;
+	padding: 10px;
+	margin: 0 5px;
+}
+
+.LEFT,
+.RIGHT {
+	float: left;
+	width: 490px;
+	height: 590px;
+}
+
+.CENTER {
+	float: left;
+	width: 620px;
+	height: 590px;
+}
+
+.yield,
+.Outputvalue,
+.Product,
+.Achievement,
+.Important,
+.Analysis {
+	padding: 20px;
+	margin: 10px;
+	margin-bottom: 0px;
+}
+.Product{
+	width: 430px;
+	height: 245px;
+}
+.Achievement {
+	width: 430px;
+	height: 245px;
+}
+
+.Analysis {
+	float: right;
+	padding: 20px;
+	margin: 10px;
+	margin-bottom: 0px;
+}
+
+.Important {
+	margin: 10px 0 0;
+}
+
+
+
+.JINDU {
+	height: 24px;
+	line-height: 24px;
+	float: left;
+}
+
+#maina table {
+	float: left;
+}
+
+
+/*#maina table tr{
+				background-image: url(img/trBJ.png);
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+			}*/
+
+#maina table td {
+	font-size: 14px;
+	color: #ffffff;
+	text-align: center;
+}
+
+#maina table .WCL {
+	color: #ff7f50;
+}
+#maina table .WCL2 {
+	color: #0ec149;
+}
+
+.Outputvalue {
+	margin: 10px 0 0;
+	padding-bottom: 0px;
+}
+
+.main3 {
+	padding: 0 0 15px;
+}
+
+.Order {
+	margin: 10px 10px 0;
+	float: right;
+	padding: 20px;
+}
+
+#Barmain5,
+#Piemain4,
+#Piemain1,
+#Linemain2,
+#TPiemain1,
+#TPiemain2,
+#RPiemain1,
+#RPiemain2,
+#RPiemain3,
+#RPiemain4,
+#HPiemain1,
+#HPiemain2 {
+	/*display: flex;*/
+	border-radius: 6px;
+	background-position: center;
+	background-size: cover;
+	/*text-align: center;*/
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	transform-style: preserve-3d;
+	transition: ease-in-out 600ms;
+}
+
+#Barmain5,
+#Piemain4,
+#Piemain1,
+#Linemain2 {
+	background-size: cover;
+	overflow: hidden;
+	background-image: url(../img/SYQH.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.BlankZ {
+	width: 700px;
+	height: 450px;
+	background-image: url(../img/BlankBJ.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	margin: 10px;
+	padding: 10px;
+}
+
+.BlankZ table tr {
+	background-image: url(../img/OrderBJ.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	margin: 5px;
+}
+
+.BlankZ table td {
+	text-align: center;
+	vertical-align: middle;
+	height: 30px;
+	width: 60px;
+	font-size: 18px;
+	font-family: "方正粗倩_GBK";
+	color: #06eff3;
+	padding: 10px;
+	margin: 0 5px;
+	margin: 5px;
+	border: 0px;
+}
+
+.targets-wrapper {
+	margin: 0 auto;
+/*	float: left;*/
+}
+
+
+/*Heatingfurnace页面CSS样式*/
+
+.HFZST {
+	width: 800px;
+	height: 720px;
+	background-image: url(../img/BlankBJ.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	margin: 10px;
+	padding: 10px;
+}
+
+.HFZST .top,
+.HFZST .center {
+	width: 800px;
+	height: 200px;
+}
+
+.HFZST .center,
+.HFZST .bottom {
+	margin-top: 10px;
+}
+
+.HFZST .bottom {
+	width: 800px;
+	height: 300px;
+}
+
+.HFZST .topleft,
+.HFZST .topright {
+	width: 355px;
+	height: 160px;
+	float: left;
+	padding: 20px;
+	background-image: url(../img/topleftJR.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.HFZST .JGRUWCJD,
+.HFZST .YJXX {
+	width: 760px;
+	padding: 20px;
+}
+
+.HFZST .JGRUWCJD {
+	height: 160px;
+	background-image: url(../img/HEATINGFBJ.PNG);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.HFZST .YJXX {
+	height: 260px;
+	background-image: url(../img/YJXXBJ.PNG);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.bottom table td {
+	font-family: "微软雅黑";
+	font-size: 14px;
+	color: #059de5;
+	text-align: center;
+}
+.bottom table .WCL td{
+	color: #da3f52;
+}
+.bottom table #CLZ td {
+	color: #c27d21;
+}
+
+.topleft table tr {
+	background-color: #13275c;
+}
+
+.topleft table tr:nth-of-type(2) {
+	background: #2456cf;
+	font-size: 13px;
+}
+
+.topleft table .bianshe {
+	background-color: #1d3679;
+}
+
+.topleft table td {
+	font-family: "微软雅黑";
+	text-align: center;
+	font-size: 12px;
+	color: #FFFFFF;
+}
+#HPiemain1,
+#HPiemain2 {
+	background-size: cover;
+	overflow: hidden;
+	background-image: url(../img/JRUBJ.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+
+/*rolling页面CSS样式*/
+
+.ZHAZHI {
+	width: 1000px;
+	height: 780px;
+	background-image: url(../img/BlankBJ.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	margin: 10px;
+	padding: 10px;
+}
+
+.ZHAZHI .top,
+.ZHAZHI .topcenter,
+.ZHAZHI .bottomcenter {
+	width: 1000px;
+	height: 150px;
+}
+
+.ZHAZHI .topcenter,
+.ZHAZHI .bottomcenter,
+.ZHAZHI .bottom {
+	margin-top: 10px;
+}
+
+.ZHAZHI .bottom {
+	width: 1000px;
+	height: 300px;
+}
+
+.ZHAZHI .topleft,
+.ZHAZHI .topright,
+.ZHAZHI .bottomcenterleft,
+.ZHAZHI .bottomcenterright {
+	width: 455px;
+	height: 110px;
+	float: left;
+	padding: 20px;
+	background-image: url(../img/ZZtopleftZZ.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.ZHAZHI .topcenterWCJDBJ {
+	width: 960px;
+	height: 110px;
+	float: left;
+	padding: 20px;
+	background-image: url(../img/ZZtopcenterWCJDBJ.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.ZHAZHI .bottomWLYJ {
+	width: 960px;
+	height: 260px;
+	float: left;
+	padding: 20px;
+	background-image: url(../img/ZZbottomWLYJBJ.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+.ZHAZHI .topright h2 {
+	margin: 4px 0 2px;
+}
+
+.ZHAZHI .topright p {
+	margin: 2px 0 4px;
+}
+.ZHAZHI .topleft table td {
+	font-family: "微软雅黑";
+	text-align: center;
+	font-size: 12px;
+	color: #FFFFFF;
+}
+
+.ZHAZHI .KUANQI {
+	float: left;
+	width: 465px;
+	height: 110px;
+}
+
+#RPiemain1,
+#RPiemain3 {
+	background-size: cover;
+	overflow: hidden;
+	background-image: url(../img/ZRJGBJ.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+#RPiemain2,
+#RPiemain4 {
+	background-size: cover;
+	overflow: hidden;
+	background-image: url(../img/JRJGBJ.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.CAIJIAN {
+	width: 800px;
+	height: 200px;
+	background-image: url(../img/BlankBJ.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	margin: 10px;
+	padding: 10px;
+}
+
+.CAIJIAN .top {
+	width: 800px;
+	height: 200px;
+}
+
+.CAIJIAN .topleft,
+.CAIJIAN .topright {
+	width: 355px;
+	height: 160px;
+	float: left;
+	padding: 20px;
+	background-image: url(../img/topleftJR.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.CAIJIAN .topleft table tr {
+	background-color: #13275c;
+}
+
+.CAIJIAN .topleft table tr:nth-of-type(2) {
+	background: #2456cf;
+	font-size: 13px;
+}
+
+.CAIJIAN .topleft table .bianshe {
+	background-color: #1d3679;
+}
+
+.CAIJIAN .topleft table td {
+	font-family: "微软雅黑";
+	text-align: center;
+	font-size: 12px;
+	color: #FFFFFF;
+}
+#TPiemain1,
+#TPiemain2 {
+	background-size: cover;
+	overflow: hidden;
+	background-image: url(../img/JRUBJ.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}

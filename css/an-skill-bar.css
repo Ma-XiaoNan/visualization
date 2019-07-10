@@ -1,0 +1,99 @@
+/*
+    * Plugin :  an-skill-bar
+    * Version: 1.0.1
+    * Description: A plugin that fills bars with a percentage you set.
+    * Author: Hasan Misbah
+    * Copyright 2018, Hasan Misbah
+    * Free to use and abuse under the MIT license.
+    * http://www.opensource.org/licenses/mit-license.php
+    */
+#skill {
+  width:700px;
+ /* background-color: #e3e3e3;*/
+  padding: 30px;
+  display: block;
+  border-radius: 5px;
+  /*margin: auto;*/
+}
+.skillbar {
+	width: 700px;
+	/*padding: 5px 0;*/
+	margin: 5px 0 5px;
+	position: relative;
+	display: block;
+	overflow: hidden;
+	height: 30px;
+	background-color: #fff;
+	/*border-radius: 5px 0 0 5px;*/
+	float: left;
+}
+
+.skillbar.ZYwc .title {
+	
+	background-color: #2ea8b0
+}
+
+.skillbar.ZYwc .filled {
+	background-color: #3bdce7
+}
+.skillbar.ZWwc .title {
+	background-color: #f0b109
+}
+
+.skillbar.ZWwc .filled {
+	background-color: #f8ca4d
+}
+
+.skillbar.JYwc .title {
+	background-color: #c8c800
+}
+
+.skillbar.JYwc .filled {
+	background-color: #ffff00
+}
+.skillbar.JWwc .title {
+	background-color: #3d4670
+}
+
+.skillbar.JWwc .filled {
+	background-color: #5864a2
+}
+.title1,.title2,.title3,.title4{
+	height: 20px;
+	padding: 5px;
+	width: 85px;
+	text-align: center;
+	color: #FFFFFF;
+	border-radius: 5px 0 0 5px;
+	float: left;
+	margin: 5px 0 5px;
+	background-color: #2ea8b0;
+	font-weight: 800;
+	font-family: "微软雅黑";
+}
+.title2{background-color: #f0b109;}
+.title3{background-color: #c8c800;}
+.title4{background-color: #3d4670;}
+
+.skillbar .percent{
+	padding: 5px;
+	z-index: 9;
+}
+
+.skillbar .percent {
+	color: #000;
+	font-weight: 700;
+	position: absolute;
+    right: 0;
+}
+
+.skillbar .filled {
+	z-index: 8;
+	background-color: rgba(0, 80, 80, .3);
+	height: 100%;
+	width: 0px;
+	float: left;
+}
+
+
+/*# sourceMappingURL=an-skill-bar.css.map */

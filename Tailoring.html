@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>裁剪</title>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/echarts.min.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" href="css/an-skill-bar.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	</head>
+
+	<body>
+		<div class="CAIJIAN">
+			<div class="top">
+				<div class="topleft" style="margin-right: 10px;">
+
+					<table border="0" cellspacing="0" cellpadding="0" style="width:100%;height: 100%;margin: 0 auto;">
+						<tr style="background-color: rgba(19,39,92,0);">
+							<td colspan="5" style="text-align: left;height: 24px;padding-bottom: 12px;">
+								<h2>当前加工产品的订单信息</h2></td>
+						</tr>
+						<tr>
+							<td>客户名称</td>
+							<td>精轧后版号</td>
+							<td>坯料信息</td>
+							<td>炉批号</td>
+						</tr>
+						<tr class="bianshe">
+							<td>客户1</td>
+							<td>JZ-1</td>
+							<td>P101</td>
+							<td>A101</td>
+						</tr>
+						<tr>
+							<td>客户2</td>
+							<td>JZ-2</td>
+							<td>P102</td>
+							<td>A102</td>
+						</tr>
+						<tr class="bianshe">
+							<td>客户3</td>
+							<td>JZ-3</td>
+							<td>P103</td>
+							<td>A103</td>
+						</tr>
+					</table>
+
+				</div>
+				<div class="topright">
+					<div id="TPiemain1" style="width: 355px;height:160px;"></div>
+					<div id="TPiemain2" style="width: 355px;height:160px;transform: rotateY(180deg);">
+						<h2>当日加工任务完成进度</h2>
+						<div id="skill" style=" width:305px;height: 79px;">
+							<div class="title1" style="margin-bottom: 10px;">
+								<span>已完成</span>
+							</div>
+							<div class="skillbar ZYwc" style=" width:210px;margin-bottom: 10px;">
+								<div class="filled" data-width="84.62%"></div>
+								<span class="percent">84.62%</span>
+							</div>
+                            <div class="title3">
+								<span>未完成</span>
+							</div>
+							<div class="skillbar JYwc" style=" width:210px;">
+								<span class="percent">15.38%</span>
+								<div class="filled" data-width="15.38%"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<script src="js/an-skill-bar.js"></script>
+		<script src="js/customed.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			function addHE() {
+				var front = document.getElementById("TPiemain1").getAttribute("class");
+				if(front == "" || front == null) {
+					$("#TPiemain1").addClass("test1");
+					$("#TPiemain1").css("transform", "rotateY(180deg)");
+					$("#TPiemain2").css("transform", "rotateY(360deg)");
+				} else if(front == "test1") {
+					$("#TPiemain1").removeClass();
+					$("#TPiemain1").css("transform", "rotateY(360deg)");
+					$("#TPiemain2").css("transform", "rotateY(180deg)");
+				}
+				else {
+					return;
+				}
+			}
+			setInterval("addHE()", 5000);
+			var myPieChart1 = echarts.init(document.getElementById('TPiemain1'), 'customed');
+			var myPieoption1 = {
+				title: {
+					text: '裁剪当日加工任务完成进度',
+					textStyle: {
+						fontSize: 18,
+						fontFamily: '方正粗倩_GBK'
+						//						color:'#ffffff',
+					},
+				},
+				color: ['#3bdce7', '#f3f3f3'],
+				tooltip: {
+					trigger: 'item',
+					formatter: "{a} <br/>{b}: {c} ({d}%)"
+				},
+				legend: {
+					orient: 'vertical',
+					x: 'left',
+					y: '40',
+					//					y:'30',
+					data: ['已裁剪', '未裁剪']
+				},
+
+				series: [{
+					name: '裁剪当日加工任务完成进度',
+					type: 'pie',
+					radius: ['50%', '70%'],
+					center: ['50%', '55%'],
+					avoidLabelOverlap: false,
+					label: {
+						normal: {
+							show: false,
+							position: 'center'
+						},
+						emphasis: {
+							show: true,
+							textStyle: {
+								fontSize: '16',
+								fontWeight: 'bold'
+							}
+						}
+					},
+					labelLine: {
+						normal: {
+							show: false
+						}
+					},
+					data: [{
+							value: 660,
+							name: '已裁剪'
+						},
+						{
+							value: 120,
+							name: '未裁剪'
+						}
+					]
+				}]
+			};
+			myPieChart1.setOption(myPieoption1);
+			window.addEventListener("resize", function() {
+				myPieChart1.resize();
+			});
+			$(document).ready(function() {
+				$('.skillbar').skillbar({
+					speed: 10000,
+				});
+			});
+		</script>
+	</body>
+
+</html>
