@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>轧制</title>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/echarts.min.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" href="css/an-skill-bar.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+	</head>
+
+	<body>
+		<div class="ZHAZHI">
+			<div class="top">
+				<div class="topleft" style="margin-right: 10px;">
+
+					<table border="0" cellspacing="0" cellpadding="0" style="width:100%;height: 100%;margin: 0 auto;">
+						<tr style="background-color: rgba(19,39,92,0);">
+							<td colspan="5" style="text-align: left;height: 24px;">
+								<h2>当前加工产品的订单信息</h2></td>
+						</tr>
+						<tr>
+							<td>客户名称</td>
+							<td>产品名称</td>
+							<td>规格</td>
+							<td>坯料信息</td>
+							<td>炉批号</td>
+						</tr>
+						<tr class="bianshe">
+							<td>客户1</td>
+							<td>产品1</td>
+							<td>规格1</td>
+							<td>P101</td>
+							<td>A101</td>
+						</tr>
+						<tr>
+							<td>客户2</td>
+							<td>产品2</td>
+							<td>规格2</td>
+							<td>P102</td>
+							<td>A102</td>
+						</tr>
+						<tr class="bianshe">
+							<td>客户3</td>
+							<td>产品3</td>
+							<td>规格3</td>
+							<td>P103</td>
+							<td>A103</td>
+						</tr>
+					</table>
+
+				</div>
+				<div class="topright">
+					<div id="Barmain1" style="width: 455px;height:110px;"></div>
+				</div>
+
+			</div>
+			<div class="topcenter">
+				<div class="topcenterWCJDBJ">
+					<div class="KUANQI" style="margin-right: 30px;">
+						<div id="RPiemain1" style="width:465px;height:110px;">
+
+						</div>
+						<div id="RPiemain3" style="width: 465px;height:110px;transform: rotateY(180deg);">
+							<h2>昨日加工任务完成进度</h2>
+							<div id="skill" style=" width:445px;height: 69px;padding:10px;">
+								<div class="title1" style="margin:0px;margin-bottom: 10px;">
+									<span>已完成</span>
+								</div>
+								<div class="skillbar ZYwc" style=" width:350px;margin:0px;margin-bottom: 10px;">
+									<div class="filled" data-width="65.71%"></div>
+									<span class="percent">65.71%</span>
+								</div>
+								<div class="title2" style="margin:0px;">
+									<span>未完成</span>
+								</div>
+								<div class="skillbar ZWwc" style=" width:350px;margin:0px;">
+									<span class="percent">34.29%</span>
+									<div class="filled" data-width="34.29%"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="KUANQI">
+
+						<div id="RPiemain2" style="width:465px;height:110px;">
+
+						</div>
+						<div id="RPiemain4" style="width: 465px;height:110px;transform: rotateY(180deg);">
+							<h2>当日加工任务完成进度</h2>
+							<div id="skill" style=" width:445px;height: 69px;padding:10px;">
+								<div class="title3" style="margin:0px;margin-bottom: 10px;">
+									<span>已完成</span>
+								</div>
+								<div class="skillbar JYwc" style=" width:350px;margin:0px;margin-bottom: 10px;">
+									<div class="filled" data-width="36.92%"></div>
+									<span class="percent">36.92%</span>
+								</div>
+								<div class="title4" style="margin:0px;">
+									<span>未完成</span>
+								</div>
+								<div class="skillbar JWwc" style=" width:350px;margin:0px;">
+									<span class="percent">63.08%</span>
+									<div class="filled" data-width="63.08%"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bottomcenter">
+				<div class="bottomcenterleft" style="margin-right: 10px;">
+					<div id="Linemain1" style="width: 465;height:110px;">
+
+					</div>
+				</div>
+				<div class="bottomcenterright">
+					<div id="Barmain2" style="width: 465px;height:110px;"></div>
+				</div>
+
+			</div>
+			<div class="bottom">
+				<div class="bottomWLYJ">
+					<table border="0" cellspacing="0" cellpadding="0" style="width:90%;height: 90%;margin: 10px auto;">
+						<h2>围栏预警</h2>
+						<tr class="WCL">
+							<td>13:30</td>
+							<td>1车间</td>
+							<td>围栏异常</td>
+							<td>尚未处理</td>
+						</tr>
+						<tr class="WCL">
+							<td>13:30</td>
+							<td>1车间</td>
+							<td>围栏异常</td>
+							<td>尚未处理</td>
+						</tr>
+						<tr id="CLZ">
+							<td>11:27</td>
+							<td>2车间</td>
+							<td>围栏异常</td>
+							<td>修复中</td>
+						</tr>
+						<tr id="CLZ">
+							<td>11:27</td>
+							<td>2车间</td>
+							<td>围栏异常</td>
+							<td>修复中</td>
+						</tr>
+						<tr>
+							<td>10:00</td>
+							<td>3车间</td>
+							<td>围栏异常</td>
+							<td>已修复</td>
+						</tr>
+						<tr>
+							<td>09:33</td>
+							<td>4车间</td>
+							<td>围栏异常</td>
+							<td>已修复</td>
+						</tr>
+						<tr>
+							<td>10:00</td>
+							<td>3车间</td>
+							<td>围栏异常</td>
+							<td>已修复</td>
+						</tr>
+						<tr>
+							<td>09:33</td>
+							<td>4车间</td>
+							<td>围栏异常</td>
+							<td>已修复</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+		<script src="js/an-skill-bar.js"></script>
+		<script src="js/customed.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/setTimeout.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			function addHE() {
+				var front1 = document.getElementById("RPiemain1").getAttribute("class");
+				var front2 = document.getElementById("RPiemain3").getAttribute("class");
+				if((front1 == "" || front1 == null) && (front2 == "" || front2 == null)) {
+					$("#RPiemain1").addClass("test1");
+					$("#RPiemain3").addClass("test2");
+					$("#RPiemain1").css("transform", "rotateY(180deg)");
+					$("#RPiemain3").css("transform", "rotateY(360deg)");
+					$("#RPiemain2").css("transform", "rotateY(180deg)");
+					$("#RPiemain4").css("transform", "rotateY(360deg)");
+				} else if(front1 == "test1" && front2 == "test2") {
+					$("#RPiemain1").removeClass();
+					$("#RPiemain3").removeClass();
+					$("#RPiemain1").css("transform", "rotateY(360deg)");
+					$("#RPiemain3").css("transform", "rotateY(180deg)");
+					$("#RPiemain2").css("transform", "rotateY(360deg)");
+					$("#RPiemain4").css("transform", "rotateY(180deg)");
+				} else {
+					return;
+				}
+			}
+			setInterval("addHE()", 5000);
+			var myBarChart1 = echarts.init(document.getElementById('Barmain1'), 'customed');
+			var myBaroption1 = {
+				title: {
+					text: '重要工艺信息',
+					//					subtext: '数据来自网络'
+					textStyle: {
+						fontSize: 18,
+						fontFamily: '方正粗倩_GBK'
+					},
+				},
+				tooltip: {
+					trigger: 'axis',
+					axisPointer: {
+						type: 'shadow'
+					}
+				},
+				//				legend: {
+				//					data: ['本月']
+				//				},
+				grid: {
+					left: '3%',
+					right: '4%',
+					bottom: '3%',
+					top: '30%',
+					containLabel: true
+				},
+				xAxis: {
+					type: 'value',
+					boundaryGap: [0, 0.01]
+				},
+				yAxis: {
+					type: 'category',
+					data: ['粗轧重要工艺信息', '精轧重要工艺信息']
+				},
+				series: [{
+					name: '本月',
+					type: 'bar',
+					data: [20, 33]
+				}]
+			};
+			myBarChart1.setOption(myBaroption1);
+			var myPieChart1 = echarts.init(document.getElementById('RPiemain1'), 'customed');
+			var myPieoption1 = {
+				title: {
+					text: '昨日加工任务完成进度',
+					textStyle: {
+						fontSize: 18,
+						fontFamily: '方正粗倩_GBK'
+						//						color:'#ffffff',
+					},
+				},
+				color: ['#3bdce7', '#f3f3f3'],
+				tooltip: {
+					trigger: 'item',
+					formatter: "{a} <br/>{b}: {c} ({d}%)"
+				},
+				legend: {
+					//					orient: 'vertical',
+					x: 'right',
+					//					y:'30',
+					data: ['已完成', '未完成']
+				},
+				series: [{
+					name: '昨日加工任务完成进度',
+					type: 'pie',
+					radius: ['50%', '70%'],
+					center: ['50%', '50%'],
+					avoidLabelOverlap: false,
+					label: {
+						normal: {
+							show: false,
+							position: 'center'
+						},
+						emphasis: {
+							show: true,
+							textStyle: {
+								fontSize: '14',
+								fontWeight: 'bold'
+							}
+						}
+					},
+					labelLine: {
+						normal: {
+							show: false
+						}
+					},
+					data: [{
+							value: 460,
+							name: '已完成'
+						},
+						{
+							value: 240,
+							name: '未完成'
+						}
+					]
+				}]
+			};
+			myPieChart1.setOption(myPieoption1);
+			var myPieChart2 = echarts.init(document.getElementById('RPiemain2'), 'customed');
+			var myPieoption2 = {
+				title: {
+					text: '当日加工任务完成进度',
+					textStyle: {
+						fontSize: 18,
+						fontFamily: '方正粗倩_GBK'
+						//						color:'#ffffff',
+					},
+				},
+				color: ['#ffff00', '#f3f3f3'],
+				tooltip: {
+					trigger: 'item',
+					formatter: "{a} <br/>{b}: {c} ({d}%)"
+				},
+				legend: {
+					//					orient: 'vertical',
+					x: 'right',
+					//					y:'30',
+					data: ['已完成', '未完成']
+				},
+				series: [{
+					name: '当日加工任务完成进度',
+					type: 'pie',
+					radius: ['50%', '70%'],
+					center: ['50%', '50%'],
+					avoidLabelOverlap: false,
+					label: {
+						normal: {
+							show: false,
+							position: 'center'
+						},
+						emphasis: {
+							show: true,
+							textStyle: {
+								fontSize: '14',
+								fontWeight: 'bold'
+							}
+						}
+					},
+					labelLine: {
+						normal: {
+							show: false
+						}
+					},
+					data: [{
+							value: 240,
+							name: '已完成'
+						},
+						{
+							value: 410,
+							name: '未完成'
+						}
+					]
+				}]
+			};
+			myPieChart2.setOption(myPieoption2);
+			var mylineChart1 = echarts.init(document.getElementById('Linemain1'), 'customed');
+			var mylineoption1 = {
+				title: {
+					text: '模具使用寿命',
+					textStyle: {
+						fontSize: 18,
+						fontFamily: '方正粗倩_GBK'
+						//						color:'#ffffff',
+					},
+				},
+				tooltip: {
+					trigger: 'axis'
+				},
+				legend: {
+					x: 'right',
+					data: ['模具使用寿命粗轧', '模具使用寿命精轧']
+				},
+				xAxis: {
+					type: 'category',
+					boundaryGap: false,
+					data: ['2018', '2019', '2020', '2021', '2022']
+				},
+				grid: {
+					x: 50, //X轴左侧的距离
+					y: 30, //Y轴顶部的距离
+					x2: 20, //X轴右侧的距离
+					y2: 20, //Y轴底部的距离
+				},
+				yAxis: {
+					type: 'value',
+					axisLabel: {
+						formatter: '{value} °C'
+					}
+				},
+				series: [{
+						name: '模具使用寿命粗轧',
+						type: 'line',
+						data: [15, 20, 16, 12, 13],
+					},
+					{
+						name: '模具使用寿命精轧',
+						type: 'line',
+						data: [12, 16, 14, 17, 21],
+
+					}
+				]
+			};
+			mylineChart1.setOption(mylineoption1);
+			var myBarChart2 = echarts.init(document.getElementById('Barmain2'), 'customed');
+			var myBaroption2 = {
+				color: ['#3bdce7', '#ffff00', '#61a0a8', '#d48265'],
+				title: {
+					text: '辐照检测信息',
+					textStyle: {
+						fontSize: 18,
+						fontFamily: '方正粗倩_GBK'
+					},
+
+				},
+				grid: {
+					x: 50,
+					y: 30,
+					x2: 20,
+					y2: 20,
+				},
+				xAxis: {
+					type: 'category',
+					data: ['4月11日', '4月12日', '4月13日', '4月14日', '4月15日']
+				},
+				yAxis: {
+					type: 'value'
+				},
+				series: [{
+					data: [46, 45, 30, 20, 41],
+					barWidth: 20,
+					type: 'bar',
+					markLine: {
+						silent: true,
+						data: [{
+							yAxis: 35,
+							lineStyle: {
+								color: '#ff268c'
+							},
+
+						}]
+					}
+				}]
+			};
+			myBarChart2.setOption(myBaroption2);
+			window.addEventListener("resize", function() {
+				myBarChart1.resize();
+				myPieChart1.resize();
+				myPieChart2.resize();
+				mylineChart1.resize();
+				myBarChart2.resize();
+			});
+			$(document).ready(function() {
+				$('.skillbar').skillbar({
+					speed: 10000,
+				});
+			});
+		</script>
+	</body>
+
+</html>

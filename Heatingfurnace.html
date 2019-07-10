@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>加热炉展示图</title>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/echarts.min.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" href="css/an-skill-bar.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css"/>
+	</head>
+
+	<body>
+		<div class="HFZST">
+			<div class="top">
+				<div class="topleft" style="margin-right: 10px;">
+
+					<table border="0" cellspacing="0" cellpadding="0" style="width:100%;height: 100%;">
+						<tr style="background-color: rgba(19,39,92,0);">
+							<td colspan="5" style="text-align: left;padding: 0 0 12px;height: 24px;">
+								<h2>当前加工产品的订单信息</h2></td>
+						</tr>
+						<tr>
+							<td>客户名称</td>
+							<td>产品名称</td>
+							<td>规格</td>
+							<td>坯料信息</td>
+							<td>炉批号</td>
+						</tr>
+						<tr class="bianshe">
+							<td>客户1</td>
+							<td>产品1</td>
+							<td>规格1</td>
+							<td>P101</td>
+							<td>A101</td>
+						</tr>
+						<tr>
+							<td>客户2</td>
+							<td>产品2</td>
+							<td>规格2</td>
+							<td>P102</td>
+							<td>A102</td>
+						</tr>
+						<tr class="bianshe">
+							<td>客户3</td>
+							<td>产品3</td>
+							<td>规格3</td>
+							<td>P103</td>
+							<td>A103</td>
+						</tr>
+					</table>
+				</div>
+				<div class="topright">
+					<div id="Linemain1" style="width: 355;height:160px;">
+
+					</div>
+				</div>
+			</div>
+
+			<!--当日加工任务完成进度-->
+			<div class="center">
+				<div class="JGRUWCJD">
+					<div id="HPiemain1" style="width: 760px;height:160px;">
+
+					</div>
+					<div id="HPiemain2" style="width: 760px;height:160px;transform: rotateY(180deg);">
+						
+						<h2>当日加工任务完成进度</h2>
+						<div id="skill" style=" width:700px;height: 79px;">
+							<div class="title1" style="margin-bottom: 10px;">
+								<span>已完成</span>
+							</div>
+							<div class="skillbar ZYwc" style=" width:605px;margin-bottom: 10px;">
+								<span class="percent">65.71%</span>
+									
+							
+								<div class="filled" data-width="65.71%"></div>
+								
+							</div>
+                            <div class="title3">
+								<span>未完成</span>
+							</div>
+							<div class="skillbar JYwc" style=" width:605px;">
+								<span class="percent">34.29%</span>
+								<div class="filled" data-width="34.29%"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<!--			电子围栏区域预警信息-->
+			<div class="bottom">
+				<div class="YJXX">
+					<table border="0" cellspacing="0" cellpadding="0" style="width:90%;height: 90%;margin: 10px auto;">
+						<h2>电子围栏区域预警信息</h2>
+						<tr class="WCL">
+							<td>13:30</td>
+							<td>1车间</td>
+							<td>A03机台品质异常</td>
+							<td>尚未处理</td>
+						</tr>
+						<tr class="WCL">
+							<td>13:30</td>
+							<td>1车间</td>
+							<td>A12机台故障</td>
+							<td>尚未处理</td>
+						</tr>
+						<tr id="CLZ">
+							<td>11:27</td>
+							<td>2车间</td>
+							<td>C21机台故障</td>
+							<td>修复中</td>
+						</tr>
+						<tr id="CLZ">
+							<td>11:27</td>
+							<td>2车间</td>
+							<td>A21机台缺料</td>
+							<td>补料中</td>
+						</tr>
+						<tr>
+							<td>10:00</td>
+							<td>3车间</td>
+							<td>A30机台故障</td>
+							<td>已修复</td>
+						</tr>
+						<tr>
+							<td>09:33</td>
+							<td>4车间</td>
+							<td>E18机台故障</td>
+							<td>已修复</td>
+						</tr>
+						<tr>
+							<td>10:00</td>
+							<td>3车间</td>
+							<td>E30机台品质异常</td>
+							<td>已修复</td>
+						</tr>
+						<tr>
+							<td>09:33</td>
+							<td>4车间</td>
+							<td>E12机台缺料</td>
+							<td>已修复</td>
+						</tr>
+					</table>
+
+				</div>
+
+			</div>
+
+		</div>
+		</div>
+		<script src="js/an-skill-bar.js"></script>
+		<script src="js/customed.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/setTimeout.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			function addHE() {
+				var front = document.getElementById("HPiemain1").getAttribute("class");
+				if(front == "" || front == null) {
+					$("#HPiemain1").addClass("test1");
+					$("#HPiemain1").css("transform", "rotateY(180deg)");
+					$("#HPiemain2").css("transform", "rotateY(360deg)");
+				} else if(front == "test1") {
+					$("#HPiemain1").removeClass();
+					$("#HPiemain1").css("transform", "rotateY(360deg)");
+					$("#HPiemain2").css("transform", "rotateY(180deg)");
+				}
+				else {
+					return;
+				}
+			}
+			setInterval("addHE()", 5000);
+			var mylineChart1 = echarts.init(document.getElementById('Linemain1'), 'customed');
+			var mylineoption1 = {
+				title: {
+					text: '当前产品的温度变化',
+					textStyle: {
+						fontSize: 18,
+						fontFamily: '方正粗倩_GBK'
+						//						color:'#ffffff',
+					},
+				},
+				tooltip: {
+					trigger: 'axis'
+				},
+				legend: {
+					x: 'right',
+					data: ['标准温度', '实际温度']
+				},
+				xAxis: {
+					type: 'category',
+					boundaryGap: false,
+					data: ['产品一', '产品二', '产品三', '产品四', '产品五']
+				},
+				grid: {
+					x: 50, //X轴左侧的距离
+					y: 40, //Y轴顶部的距离
+					x2: 20, //X轴右侧的距离
+					y2: 20, //Y轴底部的距离
+				},
+				yAxis: {
+					type: 'value',
+					axisLabel: {
+						formatter: '{value} °C'
+					}
+				},
+				series: [{
+						name: '标准温度',
+						type: 'line',
+						data: [31, 31, 35, 33, 32],
+					},
+					{
+						name: '实际温度',
+						type: 'line',
+						data: [35, 32, 34, 37, 36],
+
+					}
+				]
+			};
+			mylineChart1.setOption(mylineoption1);
+			var myPieChart1 = echarts.init(document.getElementById('HPiemain1'), 'customed');
+			var myPieoption1 = {
+				title: {
+					text: '当日加工任务完成进度',
+					textStyle: {
+						fontSize: 18,
+						fontFamily: '方正粗倩_GBK'
+						//						color:'#ffffff',
+					},
+				},
+				color: ['#3bdce7', '#f3f3f3'],
+				tooltip: {
+					trigger: 'item',
+					formatter: "{a} <br/>{b}: {c} ({d}%)"
+				},
+				legend: {
+					//					orient: 'vertical',
+					x: 'right',
+					//					y:'30',
+					data: ['已完成', '未完成']
+				},
+				series: [{
+					name: '当日加工任务完成进度',
+					type: 'pie',
+					radius: ['50%', '70%'],
+					avoidLabelOverlap: false,
+					label: {
+						normal: {
+							show: false,
+							position: 'center'
+						},
+						emphasis: {
+							show: true,
+							textStyle: {
+								fontSize: '16',
+								fontWeight: 'bold'
+							}
+						}
+					},
+					labelLine: {
+						normal: {
+							show: false
+						}
+					},
+					data: [{
+							value: 460,
+							name: '已完成'
+						},
+						{
+							value: 240,
+							name: '未完成'
+						}
+					]
+				}]
+			};
+			myPieChart1.setOption(myPieoption1);
+			window.addEventListener("resize", function() {
+				mylineChart1.resize();
+				myPieChart1.resize();
+			});
+			$(document).ready(function() {
+				$('.skillbar').skillbar({
+					speed: 10000,
+				});
+			});
+		</script>
+
+	</body>
+
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/echarts.min.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+	</head>
+
+	<body>
+		<div class="LGCJKSH">
+			<h1>宽厚板生产调度中心</h1>
+
+			<div class="LEFT">
+
+				<div class="yield">
+					<div id="Barmain1" style="width: 430px;height:245px;"></div>
+				</div>
+				<div class="Achievement">
+
+					<div id="Barmain5" style="width: 430px;height:245px;"></div>
+					<div id="Piemain4" style="width: 430px;height:245px;transform:rotateY(180deg);opacity:0;"></div>
+				</div>
+			</div>
+			<div class="CENTER">
+				<div class="Outputvalue">
+					<div class="Estimated">
+						<div class="main3" style="width: 580px;height:60px;">
+							<div class="main2" style="width: 115px;height:40px;">
+								本月预计产值<br>18000
+							</div>
+							<div class="main2" style="width: 115px;height:40px;">
+								本月实际产值<br>14500
+							</div>
+							<div class="main2" style="width: 115px;height:40px;">
+								合格数量<br>14000
+							</div>
+							<div class="main2" style="width: 115px;height:40px;">
+								未合格数量<br>500
+							</div>
+						</div>
+					</div>
+					<div class="Actual">
+						<div id="main3" style="width: 580px;height:255px;">
+							<div id="Linemain1" style="width: 580;height:255px;">
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="Important">
+					<div id="maina" style="width: 580px;height:180px;">
+						<h2>重要预警信息</h2>
+						<div class="YJXINXI" style="width: 580px;height:156px;">
+							<table id="CHUANS1" border="0" cellspacing="0" cellpadding="0" style="width:50%;height: 100%;border-right: 1px solid #10d1ea;">
+
+							</table>
+							<table id="CHUANS2" border="0" cellspacing="0" cellpadding="0" style="width:50%;height: 100%;">
+						    
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="RIGHT">
+				<div class="Product">
+					<div id="Piemain1" style="width: 430px;height:245px;"></div>
+					<div id="Linemain2" style="width: 430px;height:245px;transform: rotateY(180deg);opacity:0;">
+					</div>
+				</div>
+
+				<div class="Analysis">
+					<div id="Barmain2" style="width: 430px;height:245px;"></div>
+				</div>
+			</div>
+
+			<div class="Order">
+				<div id="Piemain2" style="width: 1540px;height:24px;">
+					<div class="DDSCKHYI">
+						<table border="0" cellspacing="0" cellpadding="0" style="height: 100%;margin:0 auto;">
+							<tr>
+								<td>订单生产进度：</td>
+								<td>订单1、客户1，</td>
+								<td>
+									<div class="JINDU">进度：</div>
+									<div class="JINDU">
+										<div class="progress aqua" data-width="0%">
+											<div class="progress-text"></div>
+											<div class="progress-bar">
+												<div class="progress-text"></div>
+											</div>
+										</div>
+									</div>
+
+								</td>
+								<td>、</td>
+								<td>
+									<div class="JINDU">加热炉：</div>
+									<div class="JINDU">
+										<div class="progress aqua" data-width="0%">
+											<div class="progress-text2"></div>
+											<div class="progress-bar2">
+												<div class="progress-text2"></div>
+											</div>
+										</div>
+									</div>
+
+								</td>
+								<td>、</td>
+								<td>
+									<div class="JINDU">轧制：</div>
+									<div class="JINDU">
+										<div class="progress aqua" data-width="0%">
+											<div class="progress-text3"></div>
+											<div class="progress-bar3">
+												<div class="progress-text3"></div>
+											</div>
+										</div>
+									</div>
+
+								</td>
+								<td>、</td>
+								<td>
+									<div class="JINDU">裁剪：</div>
+									<div class="JINDU">
+										<div class="progress aqua" data-width="0%">
+											<div class="progress-text4"></div>
+											<div class="progress-bar4">
+												<div class="progress-text4"></div>
+											</div>
+										</div>
+									</div>
+
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div id="Piemain3" style="width: 1540px;height:24px;">
+					<div class="DDSCKHYI">
+						<table border="0" cellspacing="0" cellpadding="0" style="height: 100%;margin:0 auto;">
+							<tr>
+								<td>订单生产进度：</td>
+								<td>订单2、客户2，</td>
+								<td>
+									<div class="JINDU">进度：</div>
+									<div class="JINDU">
+										<div class="progress aqua" data-width="0%">
+											<div class="progress-text"></div>
+											<div class="progress-bar">
+												<div class="progress-text"></div>
+											</div>
+										</div>
+									</div>
+
+								</td>
+								<td>、</td>
+								<td>
+									<div class="JINDU">加热炉：</div>
+									<div class="JINDU">
+										<div class="progress aqua" data-width="0%">
+											<div class="progress-text2"></div>
+											<div class="progress-bar2">
+												<div class="progress-text2"></div>
+											</div>
+										</div>
+									</div>
+
+								</td>
+								<td>、</td>
+								<td>
+									<div class="JINDU">轧制：</div>
+									<div class="JINDU">
+										<div class="progress aqua" data-width="0%">
+											<div class="progress-text3"></div>
+											<div class="progress-bar3">
+												<div class="progress-text3"></div>
+											</div>
+										</div>
+									</div>
+
+								</td>
+								<td>、</td>
+								<td>
+									<div class="JINDU">裁剪：</div>
+									<div class="JINDU">
+										<div class="progress aqua" data-width="0%">
+											<div class="progress-text4"></div>
+											<div class="progress-bar4">
+												<div class="progress-text4"></div>
+											</div>
+										</div>
+									</div>
+
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+		<script src="js/setTimeout.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/customed.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/getdata.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			function addHE() {
+				var front1 = document.getElementById("Barmain5").getAttribute("class");
+				var front2 = document.getElementById("Piemain1").getAttribute("class");
+				if((front1 == "" || front1 == null) && (front2 == "" || front2 == null)) {
+					$("#Piemain4").css("opacity", "1");
+					$("#Barmain5").addClass("test1");
+					$("#Barmain5").css("transform", "rotateY(180deg)");
+					$("#Piemain4").css("transform", "rotateY(360deg)");
+					$("#Barmain5").css("opacity", "0");
+
+					$("#Linemain2").css("opacity", "1");
+					$("#Piemain1").addClass("test2");
+					$("#Piemain1").css("transform", "rotateY(180deg)");
+					$("#Linemain2").css("transform", "rotateY(360deg)");
+					$("#Piemain1").css("opacity", "0");
+				} else if(front1 == "test1" && front2 == "test2") {
+					$("#Barmain5").css("opacity", "1");
+					$("#Barmain5").removeClass();
+					$("#Piemain4").css("transform", "rotateY(180deg)");
+					$("#Barmain5").css("transform", "rotateY(360deg)");
+					$("#Piemain4").css("opacity", "0");
+
+					$("#Piemain1").css("opacity", "1");
+					$("#Piemain1").removeClass();
+					$("#Piemain1").css("transform", "rotateY(360deg)");
+					$("#Linemain2").css("transform", "rotateY(180deg)");
+					$("#Linemain2").css("opacity", "0");
+				} else {
+					return;
+				}
+			}
+			setInterval("addHE()", 5000);
+			//
+			//订单1、客户1，进度
+			$('#Piemain2 .progress-bar').css('width', '30%');
+			$('#Piemain2 .progress-text').text('30%');
+			//订单1、客户1，加热炉
+			$('#Piemain2 .progress-bar2').css('width', '50%');
+			$('#Piemain2 .progress-text2').text('50%');
+			//订单1、客户1，轧制
+			$('#Piemain2 .progress-bar3').css('width', '30%');
+			$('#Piemain2 .progress-text3').text('30%');
+			//订单1、客户1，裁剪
+			$('#Piemain2 .progress-bar4').css('width', '35%');
+			$('#Piemain2 .progress-text4').text('35%');
+			//订单2、客户2，进度
+			$('#Piemain3 .progress-bar').css('width', '20%');
+			$('#Piemain3 .progress-text').text('20%');
+			//订单2、客户2，加热炉
+			$('#Piemain3 .progress-bar2').css('width', '40%');
+			$('#Piemain3 .progress-text2').text('40%');
+			//订单2、客户2，轧制
+			$('#Piemain3 .progress-bar3').css('width', '80%');
+			$('#Piemain3 .progress-text3').text('80%');
+			//订单2、客户2，裁剪
+			$('#Piemain3 .progress-bar4').css('width', '90%');
+			$('#Piemain3 .progress-text4').text('90%');
+			//通过JSON注入主体样式
+			// 基于准备好的dom，初始化echarts实例
+		</script>
+
+	</body>
+
+</html>
